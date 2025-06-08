@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgn102bg88yk5"]
+
+[ext_resource type="Material" uid="uid://dvibrwsy4lxge" path="res://materials/hacking_shader.tres" id="1_mfdb7"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_k4qjm"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8i0nm"]
+material = ExtResource("1_mfdb7")
+orientation = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mfdb7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mfdb7"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Ball" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_k4qjm")
+
+[node name="HackShader" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_8i0nm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.28821, 0, 0, 0, 3.28821, 0, 0, 0, 3.28821, 0, -0.892599, 0)
+mesh = SubResource("PlaneMesh_mfdb7")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.51379, 0, -0.876492, 0, 1.74923, 0, 0.876492, 0, 1.51379, 1.77972, -0.0779461, 2.11497)
+mesh = SubResource("BoxMesh_mfdb7")
+skeleton = NodePath("../MeshInstance3D")
