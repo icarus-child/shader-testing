@@ -5,7 +5,7 @@ All these examples are available in readme_assets if these embeds break
 ### Hacking shader effect
 The 'hack' plane stays attached to and in front of the sphere even when rotating the camera around it.
 
-https://github.com/user-attachments/assets/f67b9b76-4ed7-43c5-9d63-e66755e9e7a1
+https://github.com/user-attachments/assets/a8a5f69d-db2a-417b-8f62-bc128417bc0a
 
 ### Desaturation Light
 Lighting desatures the object with this shader relative to the strength of the light.
