@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b8eqc0ort63nc"]
+
+[ext_resource type="Shader" uid="uid://xhctpf2l4wns" path="res://shaders/desaturation_light_shader.gdshader" id="1_msdwy"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_msdwy")
+shader_parameter/color = Color(0.899413, 0.395422, 0.309109, 1)

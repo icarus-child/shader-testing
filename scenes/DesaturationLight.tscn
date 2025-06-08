@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmgkp5kup2xss"]
+
+[ext_resource type="Shader" uid="uid://xhctpf2l4wns" path="res://shaders/desaturation_light_shader.gdshader" id="1_m81y4"]
+[ext_resource type="PackedScene" uid="uid://dqmy5ietw6lrb" path="res://scenes/Background.tscn" id="1_u4dgy"]
+[ext_resource type="Material" uid="uid://b8eqc0ort63nc" path="res://materials/desaturation_light_shader.tres" id="2_30vva"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_30vva"]
+render_priority = 0
+shader = ExtResource("1_m81y4")
+shader_parameter/color = Color(0.485079, 0.963812, 0.867139, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_u4dgy"]
+material = SubResource("ShaderMaterial_30vva")
+
+[sub_resource type="BoxMesh" id="BoxMesh_m81y4"]
+material = ExtResource("2_30vva")
+
+[node name="DesaturationLight" type="Node3D"]
+
+[node name="Ball" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_u4dgy")
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.965563, 0, 0.260167, 0, 1, 0, -0.260167, 0, 0.965563, -1.64076, -0.404897, -0.179806)
+mesh = SubResource("BoxMesh_m81y4")
+skeleton = NodePath("../Ball")
+
+[node name="Background" parent="." instance=ExtResource("1_u4dgy")]
+metadata/_edit_lock_ = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.962887, 0.335288, 0.735753)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34735, 0.915908, 0.870691)
+visible = false
+light_color = Color(0, 0.747332, 0.354547, 1)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.827138, -0.0299336, -0.561201, 0.463157, 0.601912, 0.650529, 0.318321, -0.798001, 0.511728, -11.7229, 1.89501, -3.44227)
+visible = false
+sky_mode = 2
