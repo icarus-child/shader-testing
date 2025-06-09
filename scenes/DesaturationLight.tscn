@@ -29,7 +29,10 @@ skeleton = NodePath("../Ball")
 metadata/_edit_lock_ = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.962887, 0.335288, 0.735753)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08207, 0.335288, 0.735753)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_blur = 6.471
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.34735, 0.915908, 0.870691)
