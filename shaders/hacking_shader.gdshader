@@ -10,8 +10,8 @@ const float balance = 0.001;
 
 uniform float shake_speed = 2.0;
 uniform float shake_rate = 0.2;
-uniform float shake_block_size_x = 80.0;
-uniform float shake_block_size_y = 40.0;
+uniform float block_size_x = 15.0;
+uniform float block_size_y = 15.0;
 
 float random( float seed )
 {
@@ -26,12 +26,12 @@ void vertex() {
 void fragment() {
 	bool enable_shift_y = bool(
 		random(
-			( floor( SCREEN_UV.y * shake_block_size_y ) / shake_block_size_y ) * round(mod(TIME, 100.0) * 5.0)
+			( floor( UV.y * block_size_y ) / block_size_y ) * round(mod(TIME, 100.0) * 3.0)
 		) - 0.5 > shake_rate
 	);
 	bool enable_shift_x = bool(
 		random(
-			( floor( SCREEN_UV.x * shake_block_size_x ) / shake_block_size_x ) * round(mod(TIME, 100.0) * 5.0)
+			( 1.0 + floor( UV.x * block_size_x ) / block_size_x ) * round(mod(TIME, 100.0) * 3.0)
 		) - 0.5 > shake_rate
 	);
 	bool enable_shift = enable_shift_x || enable_shift_y;

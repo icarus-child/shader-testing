@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqmy5ietw6lrb"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mfdb7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_mfdb7"]
+
+[node name="Background" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.28821, 0, 0, 0, 3.28821, 0, 0, 0, 3.28821, 0, -0.892599, 0)
+mesh = SubResource("PlaneMesh_mfdb7")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.60173, 0, -0.703048, 0, 1.74923, 0, 0.703048, 0, 1.60173, 1.82661, -0.0779459, -2.03182)
+mesh = SubResource("BoxMesh_mfdb7")
+skeleton = NodePath("../MeshInstance3D")

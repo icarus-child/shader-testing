@@ -13,3 +13,5 @@ Lighting desatures the object with this shader relative to the strength of the l
 | Desaturation Shader  | Default Shader |
 | ------------- | ------------- |
 | ![desaturated_on](https://github.com/user-attachments/assets/cb94ef05-2482-48a1-a994-823f7e10011f) | ![desaturated_off](https://github.com/user-attachments/assets/1841286f-3584-46dc-b761-f46612a48590) |
+
+"Stanford Bunny" textured model from the Stanford Computer Graphics Laboratory

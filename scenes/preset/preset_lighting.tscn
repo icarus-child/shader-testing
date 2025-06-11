@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctk24dhc3ggh5"]
+
+[ext_resource type="Texture2D" uid="uid://5mow5woihlt3" path="res://assets/kloppenheim_06_puresky_2k.exr" id="1_tphhf"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_vbemg"]
+panorama = ExtResource("1_tphhf")
+
+[sub_resource type="Sky" id="Sky_8cyfi"]
+sky_material = SubResource("PanoramaSkyMaterial_vbemg")
+
+[sub_resource type="Environment" id="Environment_7dvfw"]
+background_mode = 2
+sky = SubResource("Sky_8cyfi")
+
+[node name="PresetLighting" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.369619, 0.517437, -0.771778, 0.0330005, 0.822764, 0.567425, 0.928597, -0.2352, 0.287033, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7dvfw")
